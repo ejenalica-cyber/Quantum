@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@layer utilities {
+  @keyframes pulse-soft {
+    0%, 100% {
+      box-shadow: 0 0 0 0 rgba(201, 166, 107, 0.4);
+    }
+    50% {
+      box-shadow: 0 0 0 8px rgba(201, 166, 107, 0);
+    }
+  }
+
+  .animate-pulse-soft {
+    animation: pulse-soft 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  .py-120 {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+
+  .mt-120 {
+    margin-top: 120px;
+  }
+}
